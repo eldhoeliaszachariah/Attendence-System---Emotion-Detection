@@ -66,7 +66,7 @@ def mark_attendance(name, emotion):
     current_time = datetime.now().time()
     now = datetime.now().strftime('%H:%M:%S')
     start_time = time(9, 30)
-    end_time = time(23, 50)
+    end_time = time(10, 0)
 
     # Check if the name is already marked
     if not ((attendance_df['Name'] == name) & (attendance_df['Status'] == 'Present')).any():
@@ -131,7 +131,7 @@ def detect_and_recognize(img, detector, encoder, encoding_dict):
 
 if __name__ == "__main__":
     start_time = time(9, 30)
-    end_time = time(23, 50)
+    end_time = time(10, 0)
 
     cap = cv2.VideoCapture(0)
     while cap.isOpened():
